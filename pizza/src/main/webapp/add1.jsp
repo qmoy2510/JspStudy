@@ -11,7 +11,7 @@
 	<%@include file="nav.jsp" %>
 	<section>
 		<h2>매출전표등록</h2>
-		<form name="form" action="addAction1" onreset="fnReset()" onsubmit="return fnAdd()">
+		<form name="form" action="addAction1.jsp" onreset="fnReset()" onsubmit="return fnAdd()">
 			<table>
 				<tr>
 					<td>매출전표번호</td>

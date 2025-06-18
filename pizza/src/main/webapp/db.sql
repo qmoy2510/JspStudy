@@ -60,3 +60,6 @@ insert into tbl_salelist_01 values(100014, 'S004', '2018-12-04', 'AA02', 20);
 insert into tbl_salelist_01 values(100015, 'S004', '2018-12-04', 'AA06', 50);
 
 select saleno, l.scode, sname, to_char(saledate, 'yyyy-mm-dd'), l.pcode, pname, amount,to_char((cost*amount), 'l999,999,999') from tbl_salelist_01 l, tbl_shop_01 s, tbl_pizza_01 p where l.scode = s.scode and l.pcode = p.pcode
+select l.scode,saleno, sum((cost*amount)) from (select l.scode,(cost*amount) from tbl_salelist_01 l, tbl_shop_01 s, tbl_pizza_01 p where l.scode = s.scode and l.pcode = p.pcode) group by l.scode,saleno
+
+select l.pcode, pname, sum((cost*amount)) from tbl_salelist_01 l, tbl_pizza_01 p  where l.pcode = p.pcode group by l.pcode, pname order by 3 desc
