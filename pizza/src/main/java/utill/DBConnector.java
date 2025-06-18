@@ -9,7 +9,7 @@ public class DBConnector {
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
 			con = DriverManager.getConnection
-					("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+					("jdbc:oracle:thin:@localhost:1521:xe","qmoy2510","1234");
 			return con;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

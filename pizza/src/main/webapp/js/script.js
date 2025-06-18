@@ -1,4 +1,4 @@
-function fnSave() {
+function fnAdd() {
 	if(!form.num2.value){
 		alert("학번이 입력되지 않았습니다.");
 		form.num2.focus();
@@ -18,22 +18,6 @@ function fnSave() {
 		return true;
 	}
 }
-function fnResetMsg() {
-	alert("입력을 초기화 합니다.");	
-}
-function fnSearch() {
-	if(form.num1.value == 1){
-		alert("조회항목을 선택하지 않았습니다.");
-		form.num1.focus();
-		return false;
-	}
-	else if(!form.num2.value){
-		alert("조회내용을 입력되지 않았습니다.");
-		form.num2.focus();
-		return false;
-	}
-	else{
-		alert("저장되었습니다.");	
-		return true;
-	}
+function fnReset() {
+	alert("정보를 지우고 처음부터 다시 입력 합시다!");	
 }
